@@ -44,8 +44,7 @@ class ViewController: UIViewController {
     self.getPhotos()
     
     // pagination
-    self.tableView.rx.prefetchRows
-      .debug("디버깅") // IndexPath값이 방출
+    self.tableView.rx.prefetchRows // IndexPath값들이 방출
       .compactMap(\.last?.row)
       .withUnretained(self)
       .bind { ss, row in
@@ -60,7 +59,7 @@ class ViewController: UIViewController {
     self.currentPage += 1
     let url = "https://api.unsplash.com/photos/"
     let photoRequest = PhotoRequest(page: self.currentPage)
-    let headers: HTTPHeaders = ["Authorization" : "Client-ID 2qCw8QXef4sB32s2X5L8XXKlNWnBRJ6x9u10insdD18"]
+    let headers: HTTPHeaders = ["Authorization" : "Client-ID Your Key"]
     
     AF.request(
       url,
