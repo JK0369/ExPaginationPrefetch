@@ -44,7 +44,7 @@ final class MyCell: UITableViewCell {
     self.prepare()
   }
   
-  func prepare(imageURL: String? = nil, imageSize: CGSize = .zero) {
+  func prepare(imageURL: String? = nil) {
     guard let imageURL = imageURL, let url = URL(string: imageURL) else {
       self.someImageView.image = nil
       return

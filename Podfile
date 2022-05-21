@@ -7,12 +7,12 @@ target 'ExPagination' do
   # UI
   pod 'SnapKit'
   pod 'Then'
-  
+
   # Util
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'Kingfisher'
-  
+
   # Network
   pod 'Alamofire'
 end
